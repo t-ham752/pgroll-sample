@@ -1,0 +1,14 @@
+{
+  "name": "02_user_description_set_nullable",
+  "operations": [
+    {
+      "alter_column": {
+        "table": "users",
+        "column": "description",
+        "nullable": false,
+        "up": "(SELECT CASE WHEN description IS NULL THEN 'description for ' || name ELSE description END)",
+        "down": "description"
+      }
+    }
+  ]
+}

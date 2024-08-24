@@ -1,0 +1,11 @@
+{
+  "name": "03_add_gender_to_users_with_raw_sql",
+  "operations": [
+    {
+      "sql": {
+        "up": "alter table users add column gender integer not null default 0",
+        "down": "alter table users drop column gender"
+      }
+    }
+  ]
+}

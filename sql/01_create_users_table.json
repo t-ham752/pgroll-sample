@@ -1,0 +1,27 @@
+{
+  "name": "01_create_users_table",
+  "operations": [
+    {
+      "create_table": {
+        "name": "users",
+        "columns": [
+          {
+            "name": "id",
+            "type": "serial",
+            "pk": true
+          },
+          {
+            "name": "name",
+            "type": "varchar(255)",
+            "unique": true
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "nullable": true
+          }
+        ]
+      }
+    }
+  ]
+}
